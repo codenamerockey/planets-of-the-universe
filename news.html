@@ -2,3 +2,15 @@
 layout: default
 ---
 <h1>News</h1>
+<!--THis is the code for looping through posts. the name after the word (for) can be any word you want and should match the layout name on the posts page. Then followed by -in site.posts. The layout listed in the posts page is what is used for the first name: used in the brackets then the value in the list is second and that will allow you to get any information from that front matter heading from that post.-->
+<ul>
+  <li>
+    {% for news in site.posts %}
+        <a href="">{{news.title}}</a>
+        <p>{{news.meta}}</p>
+        <p>{{news.category}}</p>
+        <p>{{news.source}}</p>
+    {% endfor %}
+   </li>
+
+</ul>
